@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mastermind Game</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>    
+        <header>
+            <h2>Play Mastermind</h2>
+        </header>
+        <section class="container">
+        <div>
+            <p id="generate">Generate secret code to start playing:</p>
+            <button id="secret-code">Generate secret code</button>
+        </div>
+        <br><br>
+        <div>
+            <label for="guess">Your guess: (ABCD, duplicates possible!) </label>
+            <br>
+            <input id="guess" type="text" maxlength="4">
+            <br>
+            <button id="compare">Compare</button>
+            <br>
+            <textarea id="tried-combinations" rows="10" cols="5"></textarea>
+            <textarea id="result" rows="10" cols="20"></textarea>
+            <br>
+            <p id="info"></p>
+        </div>
+        </section>
+        <footer>
+            <a href="./index.html">Home</a>
+        </footer>
+        <script src="./mastermindGame.js"></script>
+    </body>
+</html>

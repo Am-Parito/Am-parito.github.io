@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Make your own mosaic</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
+        <script src="./mosaicVue.js" defer></script>
+    </head>
+    <body>    
+        <header>
+            <h2>Make your own mosaic</h2>
+        </header>
+        <section class="container">
+            <!-- <div>
+                <h4>Tile color:</h4>
+                <select v-model="activColor">
+                    <option value="white">White</option>
+                    <option value="black">Black</option>
+                    <option value="yellow">Yellow</option>
+                </select>
+            </div> -->
+            <div id="colorMenu">
+                <button class="tile" style="background-image: url(./images/marmorWhite.jpg)" v-on:click="changeActivColor('white')"></button>
+                <button class="tile" style="background-image: url(./images/marmorBlack.jpg)" v-on:click="changeActivColor('black')"></button>
+                <button class="tile" style="background-image: url(./images/marmorBeige.jpg)" v-on:click="changeActivColor('yellow')"></button>
+                <button class="tile" style="background-image: url(./images/marmorBrown.jpg)" v-on:click="changeActivColor('brown')"></button>
+                <button class="tile" style="background-image: url(./images/marmorOrange.jpg)" v-on:click="changeActivColor('orange')"></button>
+                <button class="tile" v-on:click="changeActivColor('grey')"></button>
+            </div>
+            <br><br>
+            <div id="panel">
+                    <button class="tile" id="00" v-on:click="changeColor(activColor, '00')"></button>
+                    <button class="tile" id="01" v-on:click="changeColor(activColor, '01')"></button>
+                    <button class="tile" id="02" v-on:click="changeColor(activColor,'02')"></button>
+                    <button class="tile" id="03" v-on:click="changeColor(activColor,'03')"></button>
+                    <button class="tile" id="04" v-on:click="changeColor(activColor,'04')"></button>
+                    <button class="tile" id="05" v-on:click="changeColor(activColor,'05')"></button>
+                    <button class="tile" id="06" v-on:click="changeColor(activColor,'06')"></button>
+                    <button class="tile" id="07" v-on:click="changeColor(activColor,'07')"></button>
+                    <button class="tile" id="08" v-on:click="changeColor(activColor,'08')"></button>
+                    <button class="tile" id="09" v-on:click="changeColor(activColor,'09')"></button>
+
+                    <button class="tile" id="10" v-on:click="changeColor(activColor, '10')"></button>
+                    <button class="tile" id="11" v-on:click="changeColor(activColor, '11')"></button>
+                    <button class="tile" id="12" v-on:click="changeColor(activColor, '12')"></button>
+                    <button class="tile" id="13" v-on:click="changeColor(activColor, '13')"></button>
+                    <button class="tile" id="14" v-on:click="changeColor(activColor, '14')"></button>
+                    <button class="tile" id="15" v-on:click="changeColor(activColor, '15')"></button>
+                    <button class="tile" id="16" v-on:click="changeColor(activColor, '16')"></button>
+                    <button class="tile" id="17" v-on:click="changeColor(activColor, '17')"></button>
+                    <button class="tile" id="18" v-on:click="changeColor(activColor, '18')"></button>
+                    <button class="tile" id="19" v-on:click="changeColor(activColor, '19')"></button>
+
+                    <button class="tile" id="20" v-on:click="changeColor(activColor, '20')"></button>
+                    <button class="tile" id="21" v-on:click="changeColor(activColor, '21')"></button>
+                    <button class="tile" id="22" v-on:click="changeColor(activColor, '22')"></button>
+                    <button class="tile" id="23" v-on:click="changeColor(activColor, '23')"></button>
+                    <button class="tile" id="24" v-on:click="changeColor(activColor, '24')"></button>
+                    <button class="tile" id="25" v-on:click="changeColor(activColor, '25')"></button>
+                    <button class="tile" id="26" v-on:click="changeColor(activColor, '26')"></button>
+                    <button class="tile" id="27" v-on:click="changeColor(activColor, '27')"></button>
+                    <button class="tile" id="28" v-on:click="changeColor(activColor, '28')"></button>
+                    <button class="tile" id="29" v-on:click="changeColor(activColor, '29')"></button>
+
+                    <button class="tile" id="30" v-on:click="changeColor(activColor, '30')"></button>
+                    <button class="tile" id="31" v-on:click="changeColor(activColor, '31')"></button>
+                    <button class="tile" id="32" v-on:click="changeColor(activColor, '32')"></button>
+                    <button class="tile" id="33" v-on:click="changeColor(activColor, '33')"></button>
+                    <button class="tile" id="34" v-on:click="changeColor(activColor, '34')"></button>
+                    <button class="tile" id="35" v-on:click="changeColor(activColor, '35')"></button>
+                    <button class="tile" id="36" v-on:click="changeColor(activColor, '36')"></button>
+                    <button class="tile" id="37" v-on:click="changeColor(activColor, '37')"></button>
+                    <button class="tile" id="38" v-on:click="changeColor(activColor, '38')"></button>
+                    <button class="tile" id="39" v-on:click="changeColor(activColor, '39')"></button>
+
+                    <button class="tile" id="40" v-on:click="changeColor(activColor, '40')"></button>
+                    <button class="tile" id="41" v-on:click="changeColor(activColor, '41')"></button>
+                    <button class="tile" id="42" v-on:click="changeColor(activColor, '42')"></button>
+                    <button class="tile" id="43" v-on:click="changeColor(activColor, '43')"></button>
+                    <button class="tile" id="44" v-on:click="changeColor(activColor, '44')"></button>
+                    <button class="tile" id="45" v-on:click="changeColor(activColor, '45')"></button>
+                    <button class="tile" id="46" v-on:click="changeColor(activColor, '46')"></button>
+                    <button class="tile" id="47" v-on:click="changeColor(activColor, '47')"></button>
+                    <button class="tile" id="48" v-on:click="changeColor(activColor, '48')"></button>
+                    <button class="tile" id="49" v-on:click="changeColor(activColor, '49')"></button>
+
+                    <button class="tile" id="50" v-on:click="changeColor(activColor, '50')"></button>
+                    <button class="tile" id="51" v-on:click="changeColor(activColor, '51')"></button>
+                    <button class="tile" id="52" v-on:click="changeColor(activColor, '52')"></button>
+                    <button class="tile" id="53" v-on:click="changeColor(activColor, '53')"></button>
+                    <button class="tile" id="54" v-on:click="changeColor(activColor, '54')"></button>
+                    <button class="tile" id="55" v-on:click="changeColor(activColor, '55')"></button>
+                    <button class="tile" id="56" v-on:click="changeColor(activColor, '56')"></button>
+                    <button class="tile" id="57" v-on:click="changeColor(activColor, '57')"></button>
+                    <button class="tile" id="58" v-on:click="changeColor(activColor, '58')"></button>
+                    <button class="tile" id="59" v-on:click="changeColor(activColor, '59')"></button>
+
+                    <button class="tile" id="60" v-on:click="changeColor(activColor, '60')"></button>
+                    <button class="tile" id="61" v-on:click="changeColor(activColor, '61')"></button>
+                    <button class="tile" id="62" v-on:click="changeColor(activColor, '62')"></button>
+                    <button class="tile" id="63" v-on:click="changeColor(activColor, '63')"></button>
+                    <button class="tile" id="64" v-on:click="changeColor(activColor, '64')"></button>
+                    <button class="tile" id="65" v-on:click="changeColor(activColor, '65')"></button>
+                    <button class="tile" id="66" v-on:click="changeColor(activColor, '66')"></button>
+                    <button class="tile" id="67" v-on:click="changeColor(activColor, '67')"></button>
+                    <button class="tile" id="68" v-on:click="changeColor(activColor, '68')"></button>
+                    <button class="tile" id="69" v-on:click="changeColor(activColor, '69')"></button>
+
+                    <button class="tile" id="70" v-on:click="changeColor(activColor, '70')"></button>
+                    <button class="tile" id="71" v-on:click="changeColor(activColor, '71')"></button>
+                    <button class="tile" id="72" v-on:click="changeColor(activColor, '72')"></button>
+                    <button class="tile" id="73" v-on:click="changeColor(activColor, '73')"></button>
+                    <button class="tile" id="74" v-on:click="changeColor(activColor, '74')"></button>
+                    <button class="tile" id="75" v-on:click="changeColor(activColor, '75')"></button>
+                    <button class="tile" id="76" v-on:click="changeColor(activColor, '76')"></button>
+                    <button class="tile" id="77" v-on:click="changeColor(activColor, '77')"></button>
+                    <button class="tile" id="78" v-on:click="changeColor(activColor, '78')"></button>
+                    <button class="tile" id="79" v-on:click="changeColor(activColor, '79')"></button>
+
+                    <button class="tile" id="80" v-on:click="changeColor(activColor, '80')"></button>
+                    <button class="tile" id="81" v-on:click="changeColor(activColor, '81')"></button>
+                    <button class="tile" id="82" v-on:click="changeColor(activColor, '82')"></button>
+                    <button class="tile" id="83" v-on:click="changeColor(activColor, '83')"></button>
+                    <button class="tile" id="84" v-on:click="changeColor(activColor, '84')"></button>
+                    <button class="tile" id="85" v-on:click="changeColor(activColor, '85')"></button>
+                    <button class="tile" id="86" v-on:click="changeColor(activColor, '86')"></button>
+                    <button class="tile" id="87" v-on:click="changeColor(activColor, '87')"></button>
+                    <button class="tile" id="88" v-on:click="changeColor(activColor, '88')"></button>
+                    <button class="tile" id="89" v-on:click="changeColor(activColor, '89')"></button>
+
+                    <button class="tile" id="90" v-on:click="changeColor(activColor, '90')"></button>
+                    <button class="tile" id="91" v-on:click="changeColor(activColor, '91')"></button>
+                    <button class="tile" id="92" v-on:click="changeColor(activColor, '92')"></button>
+                    <button class="tile" id="93" v-on:click="changeColor(activColor, '93')"></button>
+                    <button class="tile" id="94" v-on:click="changeColor(activColor, '94')"></button>
+                    <button class="tile" id="95" v-on:click="changeColor(activColor, '95')"></button>
+                    <button class="tile" id="96" v-on:click="changeColor(activColor, '96')"></button>
+                    <button class="tile" id="97" v-on:click="changeColor(activColor, '97')"></button>
+                    <button class="tile" id="98" v-on:click="changeColor(activColor, '98')"></button>
+                    <button class="tile" id="99" v-on:click="changeColor(activColor, '99')"></button>
+            </div>
+            <br>
+            <!-- <div id="listOfTiles">
+                <legend>Number of tiles you will need:</legend>
+            <ol style="list-style: none">
+                <li v-if="counterWhite > 0">{{ counterWhite }} white</li>
+                <li v-if="counterBlack > 0">{{ counterBlack }} black</li>
+                <li v-if="counterYellow > 0">{{ counterYellow }} yellow</li>
+            </ol>
+            </div> -->
+        </section>
+        <footer>
+            <a href="./index.html">Home</a>
+        </footer>
+    </body>
+</html>

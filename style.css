@@ -37,6 +37,29 @@ button {
   margin: 2% 0%;
 }
 
+.tile {
+  background-color: darkgray;
+  border-radius: 0.2rem;
+}
+
+#colorMenu {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  width: 500px;
+  height: 50px;
+}
+
+#panel {
+  display: grid;
+  background-color: grey;
+  padding-left: 0.3%;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  width: 400px;
+  height: 400px;
+}
+
 input {
   font-size: 0.9rem;
 }

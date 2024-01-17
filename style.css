@@ -1,9 +1,4 @@
-html {
-  font-size: 16px;
-}
-
 body {
-    font-size: 1rem;
     font-family: 'Open Sans', sans-serif;
     background-color:#E9E4EA;
     color:#223542;
@@ -114,9 +109,14 @@ input {
   margin: 5%;
 }
 
-@media only screen and (max-width: 480px) {
-  html {
-    font-size: 32px;
+ @media only screen and (max-width: 480px) {
+  #panel {
+    width: 26rem;
+    height: 26rem;
   }
+  #colorMenu {
+    width: 25rem;
+    height: 5rem;
+    }
 }
 

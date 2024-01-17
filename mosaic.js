@@ -1,5 +1,5 @@
 const app = new Vue({
-    el:'.container',
+    el:'.main',
     data: {
         activColor: 'url(./images/marmorWhite.jpg)'
     },

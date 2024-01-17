@@ -18,6 +18,7 @@ header {
     left: 0;
     width: 100%;
     padding: 0.5rem 1rem;
+    text-align:center;
 }
 
 header .decoration {
@@ -27,11 +28,6 @@ header .decoration {
     height: 1.5rem;
     width: 100%;
     background-image: url('./images/logo.jpg');
-}
-
-header h1 {
-    font-size: 2.5rem;
-    text-align:center;
 }
 
 header nav {
@@ -87,3 +83,9 @@ footer {
     position: relative;
     top: 12rem;
 }
+
+@media only screen and (max-width: 480px) {
+    html {
+      font-size: 22px;
+    }
+  }

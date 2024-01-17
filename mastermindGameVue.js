@@ -1,8 +1,8 @@
 const app = new Vue({
-    el:'.container',
+    el:'.main',
     data: {
         code: '0000',
-        userRun: '0000',
+        userRun: 'AAAA',
         maxNumberOfRuns: 7,
         numberOfRuns: 0,
         youWin: false,
@@ -34,7 +34,6 @@ const app = new Vue({
             generator.push(possibleValues[randomNumber]);
             }
             this.code = generator.join('');
-            //document.getElementById('secret-code').innerHTML = "Secret Code: XXXX";
             this.newCodeGenerated = true;
             this.playing = true;
         },
@@ -75,7 +74,6 @@ const app = new Vue({
             } else {
                 document.getElementById('info').innerHTML = "Sorry, no more runs! Refresh page to play again.";
             }
-            //document.getElementById('secret-code').innerHTML = `Secret Code: ${this.code}`;
         }
 
     }

@@ -53,8 +53,8 @@ function gameOver() {
         document.getElementById('info').innerHTML = "Sorry, no more tries! Refresh page to play again.";
     }
     document.getElementById('compare').style.color = '#223542';
-    document.getElementById('secret-code').innerHTML = `Secret Code: ${secretCode}`;
-    document.getElementById('generate').style.display = 'none';
+    document.getElementById('secret-code').innerHTML = secretCode;
+    document.getElementById('generate').innerHTML = "Secret code:";
     compareButton.removeEventListener('click', playWithCode);
 }
 

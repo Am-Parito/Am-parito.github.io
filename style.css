@@ -1,6 +1,6 @@
 body {
-    font-family: 'Open Sans', sans-serif;
-    background-color:#E9E4EA;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #E4E5EA;
     color:#223542;
     margin: 0;
 }
@@ -29,20 +29,34 @@ a {
   color:#223542;
 }
 
+p {
+  font-size: 1.5rem;
+}
+
+label {
+  font-size: 1.5rem;
+}
+
 button {
-  font-size: 1rem;
+  font-size: 1.5rem;
   background-color:#4F87A2;
+  color: aliceblue;
   padding: 1%;
   border-radius: 0.5rem;
   margin: 2% 0%;
 }
 
 textarea {
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 input {
-  font-size: 1rem;
+  font-size: 1.5rem;
+}
+
+.main {
+  margin: 5% auto;
+  text-align: center;
 }
 
 .tile {
@@ -52,6 +66,7 @@ input {
 
 #colorMenu {
   display: grid;
+  margin: 0 auto;
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(2, 1fr);
   width: 40rem;
@@ -60,6 +75,7 @@ input {
 
 #panel {
   display: grid;
+  margin: 0 auto;
   background-color: grey;
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(10, 1fr);
@@ -105,18 +121,29 @@ input {
   height: 7.9rem;
 }
 
-.container {
-  margin: 5%;
-}
-
  @media only screen and (max-width: 480px) {
-  #panel {
-    width: 26rem;
-    height: 26rem;
+  html {
+    font-size: 22px;
   }
   #colorMenu {
-    width: 25rem;
-    height: 5rem;
-    }
+    width: 19rem;
+    height: 3.8rem;
+    padding-top: 20%;
+  }
+  #panel {
+    width: 19rem;
+    height: 19rem;
+  }
+  textarea {
+    font-size: 1.3rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .gameContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+  }
 }
 

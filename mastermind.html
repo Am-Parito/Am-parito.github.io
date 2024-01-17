@@ -6,24 +6,26 @@
     </head>
     <body>    
         <header>
-            <h2>Play Mastermind</h2>
+            <h1>Mastermind</h1>
         </header>
-        <section class="container">
+        <section class="main">
         <div>
             <p id="generate">Generate secret code to start playing:</p>
             <button id="secret-code">Generate secret code</button>
         </div>
         <br><br>
-        <div>
-            <label for="guess">Your guess: (ABCD, duplicates possible!) </label>
-            <br>
+        <div class="gameContainer">
+            <div>
+            <p>ABCD, duplicates possible!</p>
+            <p>Your guess:</p>
             <input id="guess" type="text" maxlength="4">
-            <br>
-            <button id="compare">Compare</button>
-            <br>
+            <button style="color:aliceblue" id="compare">Compare</button>
+            </div>
+            <div>
             <textarea id="tried-combinations" rows="10" cols="5"></textarea>
             <textarea id="result" rows="10" cols="20"></textarea>
             <br>
+            </div>
             <p id="info"></p>
         </div>
         </section>

@@ -1,5 +1,5 @@
 body {
-    font-size: 16px;
+    font-size: 1rem;
     font-family: 'Open Sans', sans-serif;
     background-color:#E9E4EA;
     color:#223542;
@@ -37,6 +37,14 @@ button {
   margin: 2% 0%;
 }
 
+textarea {
+  font-size: 1rem;
+}
+
+input {
+  font-size: 1rem;
+}
+
 .tile {
   background-color: darkgray;
   border-radius: 0.2rem;
@@ -45,9 +53,9 @@ button {
 #colorMenu {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(1, 1fr);
-  width: 500px;
-  height: 50px;
+  grid-template-rows: repeat(2, 1fr);
+  width: 40rem;
+  height: 8rem;
 }
 
 #panel {
@@ -55,16 +63,12 @@ button {
   background-color: grey;
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(10, 1fr);
-  width: 400px;
-  height: 400px;
+  width: 40rem;
+  height: 40rem;
 }
 
-input {
-  font-size: 0.9rem;
-}
-
-textarea {
-  font-size: 1rem;
+#portfolioProjects {
+  display: block;
 }
 
 .project {
@@ -77,15 +81,23 @@ textarea {
   color: aliceblue;
   width: 240px;
   height: 220px;
-  font-size: 24px;
+  font-size: 1.5rem;
   text-align: center;
   text-transform: uppercase;
-  margin: 5px;
-  border-radius: 10px;
-  box-shadow: 5px 5px #C0CFD6;
+  margin: 0.3rem;
+  border-radius: 0.6rem;
+  box-shadow: 0.3rem 0.3rem #C0CFD6;
   cursor: pointer;
   text-decoration: none;
   opacity: 0.9;
+}
+
+.related {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: space-around;
 }
 
 #log {
@@ -95,5 +107,23 @@ textarea {
 
 .container {
   margin: 5%;
+}
+
+@media only screen and (max-width: 480px) {
+  body {
+    font-size: 1.4rem;
+  }
+
+  button {
+    font-size: 1.4rem;
+  }
+  
+  textarea {
+    font-size: 1.4rem;
+  }
+  
+  input {
+    font-size: 1.4rem;
+  }
 }
 

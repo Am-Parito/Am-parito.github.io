@@ -1,3 +1,7 @@
+html {
+  font-size: 16px;
+}
+
 body {
     font-size: 1rem;
     font-family: 'Open Sans', sans-serif;
@@ -15,6 +19,7 @@ header {
 
 footer {
   margin: 2%;
+  font-size: 1.2rem;
 }
 
 nav {
@@ -79,8 +84,8 @@ input {
   align-content: space-around;
   background-color:#4F87A2;
   color: aliceblue;
-  width: 240px;
-  height: 220px;
+  width: 15rem;
+  height: 14rem;
   font-size: 1.5rem;
   text-align: center;
   text-transform: uppercase;
@@ -101,8 +106,8 @@ input {
 }
 
 #log {
-  width: 180px;
-  height: 126px;
+  width: 11.2rem;
+  height: 7.9rem;
 }
 
 .container {
@@ -110,20 +115,8 @@ input {
 }
 
 @media only screen and (max-width: 480px) {
-  body {
-    font-size: 1.4rem;
-  }
-
-  button {
-    font-size: 1.4rem;
-  }
-  
-  textarea {
-    font-size: 1.4rem;
-  }
-  
-  input {
-    font-size: 1.4rem;
+  html {
+    font-size: 28px;
   }
 }
 

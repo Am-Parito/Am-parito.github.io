@@ -80,6 +80,7 @@ header a {
 
 /* Footer */
 footer {
+    font-size: 1.2rem;
     background-color:#16354D;
     color: aliceblue;
     padding: 0.5rem 1rem;
@@ -89,7 +90,7 @@ footer {
 }
 
 @media only screen and (max-width: 480px) {
-    body {
-      font-size: 1.4rem;
+    html {
+      font-size: 28px;
     }
   }

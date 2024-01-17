@@ -2,12 +2,13 @@ const app = new Vue({
     el:'.main',
     data: {
         code: '0000',
-        userRun: 'AAAA',
         maxNumberOfRuns: 7,
         numberOfRuns: 0,
         youWin: false,
         playing: false,
-        results: []
+        results: [],
+        activLetter: 'A',
+        userT: ['Y', 'Y', 'Y', 'Y']
     },
     computed: {
         runsLeft: function() {
@@ -23,7 +24,10 @@ const app = new Vue({
                     return 'Generate secret code!'
                 }
             }
-        } 
+        },
+        userRun: function() {
+            return this.userT.join('');
+        }
     },
     methods: {
         makeCode: function() {
@@ -36,6 +40,12 @@ const app = new Vue({
             this.code = generator.join('');
             this.newCodeGenerated = true;
             this.playing = true;
+        },
+        setActivLetter: function(letter) {
+            this.activLetter = letter;
+        },
+        setLetterAt: function(index) {
+            this.userT.splice(index, 1, this.activLetter);
         },
         compare: function() {
             let whites = 0;
@@ -65,7 +75,7 @@ const app = new Vue({
             this.numberOfRuns++;
             if ((this.runsLeft === 0) || (this.youWin)) {
                 this.gameOver();
-            }
+            } 
         },
         gameOver: function() {
             this.playing = false;

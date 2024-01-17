@@ -83,6 +83,20 @@ input {
   height: 40rem;
 }
 
+#inputPanel{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+}
+
+.inputButton {
+  background-color: aliceblue;
+  text-align: center;
+  color: #223542;
+  border-radius: 0%;
+  width: 5rem;
+}
+
 #portfolioProjects {
   display: block;
 }
@@ -134,10 +148,7 @@ input {
     width: 19rem;
     height: 19rem;
   }
-  textarea {
-    font-size: 1.3rem;
-  }
-}
+ }
 
 @media only screen and (min-width: 768px) {
   .gameContainer {

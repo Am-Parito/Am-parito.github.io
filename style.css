@@ -137,7 +137,7 @@ input {
 
  @media only screen and (max-width: 480px) {
   html {
-    font-size: 22px;
+    font-size: 20px;
   }
   #colorMenu {
     width: 19rem;

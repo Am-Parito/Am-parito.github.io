@@ -135,21 +135,6 @@ input {
   height: 7.9rem;
 }
 
- @media only screen and (max-width: 480px) {
-  html {
-    font-size: 20px;
-  }
-  #colorMenu {
-    width: 19rem;
-    height: 3.8rem;
-    padding-top: 20%;
-  }
-  #panel {
-    width: 19rem;
-    height: 19rem;
-  }
- }
-
 @media only screen and (min-width: 768px) {
   .gameContainer {
     display: grid;

@@ -38,9 +38,7 @@
                     </div>   
                     <p v-if="playing">Your guess: {{ userRun }}, left: {{ runsLeft }}</p>
                     <button id="compare" v-if="playing" v-on:click="compare">Compare</button>
-                    <ol id="results" style="list-style: none">
-                        <li v-for="result in results">{{ result }}</li>
-                    </ol>
+                    <div v-for="result in results">{{ result }}</div>
                 </div>
             </div>
             <p id="info"></p>

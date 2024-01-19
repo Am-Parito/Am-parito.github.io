@@ -17,8 +17,12 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 0.5rem 1rem;
+    padding: 1rem 0;
     text-align:center;
+}
+
+h1 {
+    font-size: 2.5rem;
 }
 
 header .decoration {
@@ -33,6 +37,7 @@ header .decoration {
 header nav {
     display: flex;
     justify-content: center;
+    font-size: 1.4rem;
 }
 
 header a {
@@ -83,9 +88,3 @@ footer {
     position: relative;
     top: 12rem;
 }
-
-@media only screen and (max-width: 480px) {
-    html {
-      font-size: 22px;
-    }
-  }

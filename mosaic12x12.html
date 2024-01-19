@@ -13,15 +13,23 @@
         </header>
         <section class="main">
             <div id="colorMenu">
-                <button class="tile" style="background-image: url(./images/marmorBlack.jpg)" v-on:click="changeActivColor('url(./images/marmorBlack.jpg)')"></button>
-                <button class="tile" style="background-image: url(./images/marmorWhite.jpg)" v-on:click="changeActivColor('url(./images/marmorWhite.jpg)')"></button>
-                <button class="tile" style="background-image: url(./images/byzYellow.jpg)" v-on:click="changeActivColor('url(./images/byzYellow.jpg)')"></button>
-                <button class="tile" style="background-image: url(./images/byzOrange.jpg)" v-on:click="changeActivColor('url(./images/byzOrange.jpg)')"></button>
-                <button class="tile" style="background-image: url(./images/byzRed.jpg)" v-on:click="changeActivColor('url(./images/byzRed.jpg)')"></button>
-                <button class="tile" style="background-image: url(./images/byzPurple.jpg)" v-on:click="changeActivColor('url(./images/byzPurple.jpg)')"></button>
-                <button class="tile" style="background-image: url(./images/byzBlue.jpg)" v-on:click="changeActivColor('url(./images/byzBlue.jpg)')"></button>
-                <button class="tile" style="background-image: url(./images/byzGreen.jpg)" v-on:click="changeActivColor('url(./images/byzGreen.jpg)')"></button>
-                <button class="tile" v-on:click="changeActivColor('')"></button>
+                <button class="tile" v-bind:class="{activOption:activColor === 'url(./images/marmorBlack.jpg)'}"  
+                    style="background-image: url(./images/marmorBlack.jpg)" v-on:click="changeActivColor('url(./images/marmorBlack.jpg)')"></button>
+                <button class="tile" v-bind:class="{activOption:activColor === 'url(./images/marmorWhite.jpg)'}" 
+                    style="background-image: url(./images/marmorWhite.jpg)" v-on:click="changeActivColor('url(./images/marmorWhite.jpg)')"></button>
+                <button class="tile" v-bind:class="{activOption:activColor === 'url(./images/byzYellow.jpg)'}"  
+                    style="background-image: url(./images/byzYellow.jpg)" v-on:click="changeActivColor('url(./images/byzYellow.jpg)')"></button>
+                <button class="tile" v-bind:class="{activOption:activColor === 'url(./images/byzOrange.jpg)'}" 
+                    style="background-image: url(./images/byzOrange.jpg)" v-on:click="changeActivColor('url(./images/byzOrange.jpg)')"></button>
+                <button class="tile" v-bind:class="{activOption:activColor === 'url(./images/byzRed.jpg)'}" 
+                    style="background-image: url(./images/byzRed.jpg)" v-on:click="changeActivColor('url(./images/byzRed.jpg)')"></button>
+                <button class="tile" v-bind:class="{activOption:activColor === 'url(./images/byzPurple.jpg)'}" 
+                    style="background-image: url(./images/byzPurple.jpg)" v-on:click="changeActivColor('url(./images/byzPurple.jpg)')"></button>
+                <button class="tile" v-bind:class="{activOption:activColor === 'url(./images/byzBlue.jpg)'}" 
+                    style="background-image: url(./images/byzBlue.jpg)" v-on:click="changeActivColor('url(./images/byzBlue.jpg)')"></button>
+                <button class="tile" v-bind:class="{activOption:activColor === 'url(./images/byzGreen.jpg)'}" 
+                    style="background-image: url(./images/byzGreen.jpg)" v-on:click="changeActivColor('url(./images/byzGreen.jpg)')"></button>
+                <button class="tile" v-bind:class="{activOption:activColor === ''}"  v-on:click="changeActivColor('')"></button>
             </div>
             <br><br>
             <div id="panel" style="grid-template-columns: repeat(12, 1fr);

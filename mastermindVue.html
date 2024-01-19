@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="style.css">
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
         <script src="./mastermindGameVue.js" defer></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>    
         <header>
@@ -16,16 +17,18 @@
                     <button id="secret-code" v-on:click.once="makeCode">{{ shownCode }}</button>
                     <p v-if="playing">ABCD, duplicates possible!</p>
                     <!-- <input id="guess" type="text" maxlength="4" v-model="userRun" v-if="playing"> -->
-                    <p v-if="playing">Your guess: {{ userRun }}</p>
-                    <p v-if="playing">Left: {{ runsLeft }}</p>
                 </div>
 
                 <div>
                     <div v-if="playing">
-                        <button style="width: 3rem" v-on:click="setActivLetter('A')">A</button>
-                        <button style="width: 3rem" v-on:click="setActivLetter('B')">B</button>
-                        <button style="width: 3rem" v-on:click="setActivLetter('C')">C</button>
-                        <button style="width: 3rem" v-on:click="setActivLetter('D')">D</button>
+                        <button style="width: 5rem" v-bind:class="{activOption:activLetter === 'A'}" 
+                            v-on:click="setActivLetter('A')">A</button>
+                        <button style="width: 5rem" v-bind:class="{activOption:activLetter === 'B'}" 
+                            v-on:click="setActivLetter('B')">B</button>
+                        <button style="width: 5rem" v-bind:class="{activOption:activLetter === 'C'}" 
+                            v-on:click="setActivLetter('C')">C</button>
+                        <button style="width: 5rem" v-bind:class="{activOption:activLetter === 'D'}"
+                            v-on:click="setActivLetter('D')">D</button>
                     </div>
                     <div v-if="playing">
                         <button class="inputButton" v-on:click="setLetterAt(0)">{{ userRun[0] }}</button>
@@ -33,6 +36,7 @@
                         <button class="inputButton" v-on:click="setLetterAt(2)">{{ userRun[2] }}</button>
                         <button class="inputButton" v-on:click="setLetterAt(3)">{{ userRun[3] }}</button>
                     </div>   
+                    <p v-if="playing">Your guess: {{ userRun }}, left: {{ runsLeft }}</p>
                     <button id="compare" v-if="playing" v-on:click="compare">Compare</button>
                     <ol id="results" style="list-style: none">
                         <li v-for="result in results">{{ result }}</li>

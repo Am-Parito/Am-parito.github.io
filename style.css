@@ -2,6 +2,7 @@ body {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #E4E5EA;
     color:#223542;
+    font-size: 1.2rem;
     margin: 0;
 }
 
@@ -14,7 +15,6 @@ header {
 
 footer {
   margin: 2%;
-  font-size: 1.2rem;
 }
 
 nav {
@@ -29,16 +29,8 @@ a {
   color:#223542;
 }
 
-p {
-  font-size: 1.5rem;
-}
-
-label {
-  font-size: 1.5rem;
-}
-
 button {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   background-color:#4F87A2;
   color: aliceblue;
   padding: 1%;
@@ -47,58 +39,16 @@ button {
 }
 
 textarea {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 input {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .main {
   margin: 5% auto;
   text-align: center;
-}
-
-.tile {
-  background-color: darkgray;
-  border-radius: 0.2rem;
-}
-
-#colorMenu {
-  display: grid;
-  margin: 0 auto;
-  grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  width: 40rem;
-  height: 8rem;
-}
-
-#panel {
-  display: grid;
-  margin: 0 auto;
-  background-color: grey;
-  grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(10, 1fr);
-  width: 40rem;
-  height: 40rem;
-}
-
-#inputPanel{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(1, 1fr);
-}
-
-.inputButton {
-  background-color: aliceblue;
-  text-align: center;
-  color: #223542;
-  border-radius: 0%;
-  width: 5rem;
-}
-
-#portfolioProjects {
-  display: block;
 }
 
 .project {
@@ -135,17 +85,55 @@ input {
   height: 7.9rem;
 }
 
-@media only screen and (max-width: 480px) {
- #colorMenu {
-   width: 18rem;
-   height: 3.6rem;
-   padding-top: 20%;
- }
- #panel {
-   width: 18rem;
-   height: 18rem;
- }
+.inputButton {
+  background-color: aliceblue;
+  text-align: center;
+  color: #223542;
+  border-radius: 0%;
+  width: 5rem;
 }
+
+#inputPanel{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+}
+
+.tile {
+  background-color: darkgray;
+  border-radius: 0.2rem;
+}
+
+#colorMenu {
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  width: 40rem;
+  height: 8rem;
+}
+
+#panel {
+  display: grid;
+  margin: 0 auto;
+  background-color: grey;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  width: 40rem;
+  height: 40rem;
+}
+
+ @media only screen and (max-width: 480px) {
+  #colorMenu {
+    width: 19rem;
+    height: 3.8rem;
+    padding-top: 20%;
+  }
+  #panel {
+    width: 19rem;
+    height: 19rem;
+  }
+ }
 
 @media only screen and (min-width: 768px) {
   .gameContainer {

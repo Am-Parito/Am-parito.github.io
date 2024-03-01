@@ -80,14 +80,6 @@ label {
   opacity: 0.9;
 }
 
-.related {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-content: space-around;
-}
-
 #log {
   width: 11.2rem;
   height: 7.9rem;
